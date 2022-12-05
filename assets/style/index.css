@@ -1,0 +1,189 @@
+﻿@import "reset.css";
+/*---------------------------*/
+/*Header footer use*/
+/*---------------------------*/
+:root {
+    --app-header-height: 56px;
+    --app-footer-height: 400px;
+    --app-section-padding-height: 120px;
+    --app-sectitle-padding-height: 40px;
+    --app-content-text-color: #949393;
+    --app-blue: #5fb7f8;
+}
+
+/*main content*/
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #393939;
+}
+
+.site-main-content {
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.title-cls{
+    width:500px;
+    color:#fff;
+    font-size:36px;
+}
+
+dialog {
+    position: fixed;
+    margin: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    border: none;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+}
+dialog[open] {
+    animation: slide-up 0.4s ease-out;
+}
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+.dialog-title {
+    font-size:24px;
+    font-weight:600;
+}
+.btn-accept {
+    width: 48%;
+    height: 40px;
+    color: #fff;
+    background-color: var(--app-blue);
+    transition: all 0.25s ease-in-out;
+    border-radius: 40px;
+}
+.btn-accept:hover {
+    background-color: #0f97fb;
+}
+
+.btn-set {
+    width: 48%;
+    height: 40px;
+    margin-left:10px;
+    color: var(--app-blue);
+    border: solid 1px var(--app-blue);
+    transition: all 0.25s ease-in-out;
+    border-radius: 40px;
+    background-color: #fff;
+}
+
+.btn-set:hover {
+    background-color: #0f97fb;
+    color:#fff;
+}
+.btn-save {
+    width: 120px;
+    height: 40px;
+    color: #fff;
+    background-color: var(--app-blue);
+    transition: all 0.25s ease-in-out;
+    border-radius: 40px;
+}
+.btn-save:hover {
+    background-color: #0f97fb;
+}
+
+.div-btn-area {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.content {
+        display: grid;
+        grid-template-columns: 68% 28%;
+        grid-gap: 10px;
+    }
+.grid-item {
+    display:flex;
+    align-items:center;
+}
+.grid-item2 {
+    display: flex;
+    align-items: center;
+    justify-content:right;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #949393;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #949393;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+ 
